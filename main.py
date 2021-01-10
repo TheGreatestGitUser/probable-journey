@@ -30,6 +30,9 @@ class MyClient(discord.Client):  # creates a MyClient class
                 'https://yesno.wtf/api')  # fetches the yes/no json data
             await message.channel.send(data.json()["image"])  # sends the image
 
+        if message.content.lower() == 'j!ree':
+            await message.channel.send("ree")
+
         if message.content.lower() == 'j!anime':  # creates the command
             response = requests.get('https://kitsu.io/api/edge/anime'
                                     )  # fetches the yes/no json data
